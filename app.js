@@ -1,23 +1,36 @@
-/*
+ /*
 * Function that access every key value pair in the nested array
 * in an array 
 */
 function accessObjectInArray(arr){
 	//Print the parameter being passed through
+		console.log(arr);
 
 	//How can we tell what type of data this is?
 	//By it's notation, the top level is bracket notation, therefore the parameter is an array
 
 	//What methods can we use for this item?
 	//Array methods
-
+	console.log(arr.length);
+	
 	//Access and print the first object in the parameter 
+	console.log(arr[0]);
 
 	//Access and print the third object in the parameter
+	console.log(arr[2]);
 
 	//Iterate through the array to print all the objects in the parameter
-
+		for (var i = 0; i < arr.length; i++){
+			// console.log(arr[i]);
+			console.log("app.js, line 25") + console.log(arr[i]);
+			
+			for (var key in arr){
+				console.log(key);
+				console.log(arr[key]);
+			}
+		}
 		//Can you concatanete a string to an object?
+			//no
 
 		//Iterate through the key:value pairings and print all the keys and their values
 
@@ -48,15 +61,36 @@ console.log("\n*** End ***\n")
 */
 function accessArrayInObject(obj){
 	//Is the parameter an array or an object?
+		//an object
+	console.log(obj);
 
 	//Print the paramter being passed through the function
 
 	//Iterate through the object
-
+	for (var key in obj){
+		console.log(key);
+		console.log(obj[key]);
+		console.log("\nValues");
+		console.log(obj[key]);
+		console.log("\n");
 	//Create a conditional to check if the key is "cars"
-
+		if (key === "cars"){
+			console.log("Inside conditional for cars");
+			//console log before main console log to retain thoguth process
+			console.log(obj[key]);
+			for (var carValues in obj[key]){
+			console.log("\nValues for key 'cars'")
+			console.log(obj[key][carValues]);
+			}
+		}
+	}
+	
+	/*	\t == tab
+		\n == new line
+	*/
+	
 	//Iterate through and print the values in the key "cars"
-
+	
 	//Iterate through and print the key value pairs for each object in the array "toppings"
 
 	//Clean up your code by creating variable names and setting their values
