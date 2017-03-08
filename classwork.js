@@ -68,6 +68,7 @@ console.log(isItEnabled(preview));
 
 function changeEnabled(data) {
 	//create a variable with enabled value, dynamicaly change
+	var enabledVal;
 }
 
 /*
