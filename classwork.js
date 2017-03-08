@@ -39,6 +39,33 @@ var preview = {
 * Return 	isEnabled (string)
 */
 
+function isItEnabled(val){
+	/*
+	for...in loop
+	conditional checks if key is enabled
+	if key is enabled, return the value from the key
+	*/
+	var isEnabled = "";
+	for (var key in val) {
+		if (key == "enabled"){
+			isEnabled += val[key];
+			// var isEnabled = val[key];
+			// var check = isEnabled.toString();
+			// console.log(check);
+			// return typeof isEnabled; //boolean because key enabled is false
+			// if (typeof check == "string") {
+			// 	console.log(check);
+			// 	// return isEnabled;
+			}
+		}
+	}
+	console.log(typeof isEnabled);
+	return isEnabled
+}
+
+//wrapping an invoke of a func as a console log can show returns
+console.log(isItEnabled(preview));
+
 /*
 * Function that changes the value from the key "enabled" to true, and returns 
 * the value from the key "enabled"
