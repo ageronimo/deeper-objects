@@ -47,7 +47,7 @@ function isItEnabled(val) {
 	*/
 	var isEnabled = "";
 	for (var key in val) {
-		if (key == "enabled"){
+		if (key === "enabled") {
 			isEnabled += val[key];
 			}
 		}
@@ -66,12 +66,24 @@ console.log(isItEnabled(preview));
 * Return 	value from key enabled (boolean)
 */
 
+function changeEnabled(data) {
+	//create a variable with enabled value, dynamicaly change
+}
+
 /*
 * Function that retrieves the urls only from the key "resolutions" 
 * , stores the values in an array called "urls", and returns the created array
 * 
 * Return 	urls (array)
 */
+
+function retrieveURLS(data) {
+	for (var key in data) {
+		if (key === "enabled") {
+
+		}
+	}
+}
 
 /*
 * Function that retrieves the first nested key and value pairing
